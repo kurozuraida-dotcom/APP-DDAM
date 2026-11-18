@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Formación Académica</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <div class="mobile-frame">
+        <header class="app-header">
+            <a href="principal.html" class="btn-close-x" title="Cancelar y volver">X</a>
+            <h1>Formación Académica</h1>
+            <p>Estudios y títulos obtenidos</p>
+        </header>
+
+        <main class="app-body">
+            <form class="form-card" data-categoria="Formación académica" novalidate>
+                <div class="input-group">
+                    <label for="institucion">Nombre de la institución *</label>
+                    <input type="text" id="institucion" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="carrera">Carrera o especialidad *</label>
+                    <input type="text" id="carrera" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="fechaInicio">Fecha de inicio *</label>
+                    <input type="date" id="fechaInicio" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="fechaFin">Fecha de finalización *</label>
+                    <input type="date" id="fechaFin" required>
+                </div>
+
+                <div class="input-group file-input-box">
+                    <label for="archivoCertificado">Certificado de finalización (Obligatorio) *</label>
+                    <input type="file" id="archivoCertificado" accept=".pdf,.jpg,.jpeg,.png" required>
+                </div>
+
+                <p id="mensajeFeedback" class="feedback-msg"></p>
+                <button type="submit" class="btn-primary">Registrar formación académica</button>
+            </form>
+        </main>
+    </div>
+    <script src="../js/formularios.js"></script>
+</body>
+</html>

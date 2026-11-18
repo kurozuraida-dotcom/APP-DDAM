@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Proyectos y Prácticas</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <div class="mobile-frame">
+        <header class="app-header">
+            <a href="principal.html" class="btn-close-x" title="Cancelar y volver">X</a>
+            <h1>Proyectos y Prácticas</h1>
+            <p>Evidencias prácticas realizadas</p>
+        </header>
+
+        <main class="app-body">
+            <form class="form-card" data-categoria="Proyectos y prácticas" novalidate>
+                <div class="input-group">
+                    <label for="nombreProyecto">Nombre del proyecto realizado *</label>
+                    <input type="text" id="nombreProyecto" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="empresaProyecto">Nombre de la empresa a la que se realizó *</label>
+                    <input type="text" id="empresaProyecto" required>
+                    <label class="checkbox-row">
+                        <input type="checkbox" id="esProyectoPersonal">
+                        <span>Marcar como proyecto personal</span>
+                    </label>
+                </div>
+
+                <div class="input-group">
+                    <label for="fechaInicioProyecto">Fecha de iniciación *</label>
+                    <input type="date" id="fechaInicioProyecto" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="fechaFinProyecto">Fecha de finalización *</label>
+                    <input type="date" id="fechaFinProyecto" required>
+                </div>
+
+                <div class="input-group file-input-box">
+                    <label for="archivoProyecto">Comprobante de proyecto o prácticas (Obligatorio) *</label>
+                    <input type="file" id="archivoProyecto" accept=".pdf,.jpg,.jpeg,.png" required>
+                </div>
+
+                <p id="mensajeFeedback" class="feedback-msg"></p>
+                <button type="submit" class="btn-primary">Registrar proyecto o práctica</button>
+            </form>
+        </main>
+    </div>
+    <script src="../js/formularios.js"></script>
+</body>
+</html>

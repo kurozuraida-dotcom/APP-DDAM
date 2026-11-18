@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Evidencias - Principal</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+    <div class="mobile-frame">
+        <!-- Esquina superior izquierda: Cerrar sesión | Esquina superior derecha: Nombre -->
+        <header class="top-bar-principal">
+            <button type="button" id="btnCerrarSesion" class="btn-logout">Cerrar sesión</button>
+            <div class="user-badge" id="nombreUsuarioHeader">Usuario</div>
+        </header>
+
+        <main class="app-body">
+            <!-- Botón + con texto abajo -->
+            <div id="btnAbrirCategorias" class="add-section" role="button" tabindex="0">
+                <div class="btn-plus-circle">+</div>
+                <span class="add-label">Agregar información a tu portafolio</span>
+            </div>
+
+            <!-- Lista dinámica donde se reflejan los resúmenes guardados -->
+            <section id="contenedorPortafolio" class="portfolio-list"></section>
+        </main>
+
+        <!-- Modal selector de categorías para navegar a cada formulario -->
+        <div id="modalCategorias" class="modal-overlay">
+            <div class="modal-sheet">
+                <div class="modal-header">
+                    <h2>Selecciona qué deseas agregar</h2>
+                    <button type="button" id="btnCerrarModalCat" class="btn-close-x" style="position:static;">X</button>
+                </div>
+                <a href="datosPersonales.html" class="category-option">1. Datos personales</a>
+                <a href="formacionAcademica.html" class="category-option">2. Formación académica</a>
+                <a href="cursos.html" class="category-option">3. Cursos</a>
+                <a href="congresos.html" class="category-option">4. Congresos</a>
+                <a href="conferencias.html" class="category-option">5. Conferencias</a>
+                <a href="experienciaLaboral.html" class="category-option">6. Experiencia laboral</a>
+                <a href="proyectosPracticas.html" class="category-option">7. Proyectos y prácticas</a>
+                <a href="habilidadesIntereses.html" class="category-option">8. Habilidades e intereses</a>
+            </div>
+        </div>
+
+        <!-- Modal para abrir y ver el detalle completo + archivo adjunto de cada elemento -->
+        <div id="modalDetalle" class="modal-overlay">
+            <div class="modal-sheet">
+                <div class="modal-header">
+                    <h2 id="detalleTitulo">Detalle del registro</h2>
+                    <button type="button" id="btnCerrarModalDetalle" class="btn-close-x" style="position:static;">X</button>
+                </div>
+                <div id="detalleContenido" class="detail-list"></div>
+                <button type="button" id="btnEliminarRegistro" class="btn-primary" style="background-color: var(--error);">Eliminar registro</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/principal.js"></script>
+</body>
+</html>

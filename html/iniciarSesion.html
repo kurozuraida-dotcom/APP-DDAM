@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Evidencias - Iniciar Sesión</title>
+    <!-- Conectamos la hoja de estilos desde la carpeta exterior -->
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+    <div class="mobile-frame">
+        <!-- Encabezado -->
+        <header class="app-header">
+            <h1>Portal de Evidencias</h1>
+            <p>Inicio de sesión</p>
+        </header>
+
+        <!-- Cuerpo principal -->
+        <main class="app-body">
+            <form id="formIniciarSesion" class="form-card" novalidate>
+                
+                <div class="input-group">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" placeholder="correo@ejemplo.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="contrasena">Contraseña</label>
+                    <input type="password" id="contrasena" placeholder="Introduce tu contraseña" required>
+                </div>
+
+                <!-- Mensaje de retroalimentación -->
+                <p id="mensajeFeedback" class="feedback-msg"></p>
+
+                <button type="submit" class="btn-primary">Iniciar sesión</button>
+            </form>
+
+            <!-- Acciones de navegación y control de acceso -->
+            <div class="extra-actions" style="display: flex; flex-direction: column; gap: 12px; margin-top: 20px;">
+                <a href="registro.html" class="link-text">¿No tienes cuenta? <strong>Regístrate</strong></a>
+                <button type="button" id="btnInvitado" class="btn-secondary">Ingresar como invitado</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Conectamos el archivo de lógica JS -->
+    <script src="../js/iniciarSesion.js"></script>
+</body>
+</html>

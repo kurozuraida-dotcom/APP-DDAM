@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Evidencias - Registro</title>
+    <!-- Conectando el archivo CSS desde la carpeta exterior -->
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+    <div class="mobile-frame">
+        <!-- Encabezado de la pantalla -->
+        <header class="app-header">
+            <h1>Portal de Evidencias</h1>
+            <p>Crear nueva cuenta</p>
+        </header>
+
+        <!-- Contenido principal -->
+        <main class="app-body">
+            <form id="formRegistro" class="form-card" novalidate>
+                
+                <div class="input-group">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" placeholder="Ej. Ana Pérez" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" placeholder="correo@ejemplo.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="contrasena">Contraseña</label>
+                    <input type="password" id="contrasena" placeholder="Mínimo 6 caracteres" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="confirmarContrasena">Confirmar contraseña</label>
+                    <input type="password" id="confirmarContrasena" placeholder="Repite tu contraseña" required>
+                </div>
+
+                <!-- Elemento para mensajes de retroalimentación -->
+                <p id="mensajeFeedback" class="feedback-msg"></p>
+
+                <button type="submit" class="btn-primary">Registrarse</button>
+            </form>
+
+            <div class="extra-actions">
+                <a href="iniciarSesion.html" class="link-text">¿Ya tienes una cuenta? <strong>Inicia sesión</strong></a>
+            </div>
+        </main>
+    </div>
+
+    <!-- Conectando el archivo JS de lógica -->
+    <script src="../js/registro.js"></script>
+</body>
+</html>

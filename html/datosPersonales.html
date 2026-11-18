@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Datos Personales</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <div class="mobile-frame">
+        <header class="app-header">
+            <a href="principal.html" class="btn-close-x" title="Cancelar y volver">X</a>
+            <h1>Datos Personales</h1>
+            <p>Información de identificación</p>
+        </header>
+
+        <main class="app-body">
+            <form class="form-card" data-categoria="Datos personales" novalidate>
+                <div class="input-group">
+                    <label for="nombreCompleto">Nombre completo *</label>
+                    <input type="text" id="nombreCompleto" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="fechaNacimiento">Fecha de nacimiento *</label>
+                    <input type="date" id="fechaNacimiento" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="direccion">Dirección *</label>
+                    <input type="text" id="direccion" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="correoElectronico">Correo electrónico *</label>
+                    <input type="email" id="correoElectronico" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="sexo">Sexo *</label>
+                    <select id="sexo" required>
+                        <option value="">Selecciona una opción...</option>
+                        <option value="Femenino">Femenino</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="curp">CURP *</label>
+                    <input type="text" id="curp" maxlength="18" style="text-transform: uppercase;" required>
+                </div>
+
+                <div class="input-group file-input-box">
+                    <label for="archivoIne">Documento INE o ID oficial (Obligatorio) *</label>
+                    <input type="file" id="archivoIne" accept=".pdf,.jpg,.jpeg,.png" required>
+                </div>
+
+                <p id="mensajeFeedback" class="feedback-msg"></p>
+                <button type="submit" class="btn-primary">Registrar datos personales</button>
+            </form>
+        </main>
+    </div>
+    <script src="../js/formularios.js"></script>
+</body>
+</html>

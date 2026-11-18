@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Congresos</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <div class="mobile-frame">
+        <header class="app-header">
+            <a href="principal.html" class="btn-close-x" title="Cancelar y volver">X</a>
+            <h1>Congresos</h1>
+            <p>Participación en congresos</p>
+        </header>
+
+        <main class="app-body">
+            <form class="form-card" data-categoria="Congresos" novalidate>
+                <div class="input-group">
+                    <label for="temaCongreso">Tema del congreso *</label>
+                    <input type="text" id="temaCongreso" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="organizadorCongreso">Quién lo brindó *</label>
+                    <input type="text" id="organizadorCongreso" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="fechaCongreso">Fecha de realización *</label>
+                    <input type="date" id="fechaCongreso" required>
+                </div>
+
+                <div class="input-group file-input-box">
+                    <label for="archivoCongreso">Comprobante de asistencia (Obligatorio) *</label>
+                    <input type="file" id="archivoCongreso" accept=".pdf,.jpg,.jpeg,.png" required>
+                </div>
+
+                <p id="mensajeFeedback" class="feedback-msg"></p>
+                <button type="submit" class="btn-primary">Registrar congreso</button>
+            </form>
+        </main>
+    </div>
+    <script src="../js/formularios.js"></script>
+</body>
+</html>

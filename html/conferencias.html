@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Conferencias</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <div class="mobile-frame">
+        <header class="app-header">
+            <a href="principal.html" class="btn-close-x" title="Cancelar y volver">X</a>
+            <h1>Conferencias</h1>
+            <p>Asistencia a conferencias</p>
+        </header>
+
+        <main class="app-body">
+            <form class="form-card" data-categoria="Conferencias" novalidate>
+                <div class="input-group">
+                    <label for="ponenteConferencia">Institución o persona que dio la conferencia *</label>
+                    <input type="text" id="ponenteConferencia" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="temaConferencia">Tema de la conferencia *</label>
+                    <input type="text" id="temaConferencia" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="fechaConferencia">Fecha de realización *</label>
+                    <input type="date" id="fechaConferencia" required>
+                </div>
+
+                <div class="input-group file-input-box">
+                    <label for="archivoConferencia">Comprobante de asistencia (Obligatorio) *</label>
+                    <input type="file" id="archivoConferencia" accept=".pdf,.jpg,.jpeg,.png" required>
+                </div>
+
+                <p id="mensajeFeedback" class="feedback-msg"></p>
+                <button type="submit" class="btn-primary">Registrar conferencia</button>
+            </form>
+        </main>
+    </div>
+    <script src="../js/formularios.js"></script>
+</body>
+</html>

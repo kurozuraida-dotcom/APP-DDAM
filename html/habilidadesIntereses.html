@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Habilidades e Intereses</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <div class="mobile-frame">
+        <header class="app-header">
+            <a href="principal.html" class="btn-close-x" title="Cancelar y volver">X</a>
+            <h1>Habilidades e Intereses</h1>
+            <p>Presiona Enter para separar cada punto</p>
+        </header>
+
+        <main class="app-body">
+            <form class="form-card" data-categoria="Habilidades e intereses" novalidate>
+                <div class="input-group">
+                    <label for="listaHabilidades">Habilidades (usa salto de renglón / Enter por cada habilidad) *</label>
+                    <textarea id="listaHabilidades" placeholder="Facilidad de aprendizaje&#10;Empatía con el cliente y buena recepción" required></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label for="listaIntereses">Intereses (usa salto de renglón / Enter por cada interés) *</label>
+                    <textarea id="listaIntereses" placeholder="Desarrollo de aplicaciones móviles&#10;Diseño de interfaces UX/UI" required></textarea>
+                </div>
+
+                <p id="mensajeFeedback" class="feedback-msg"></p>
+                <button type="submit" class="btn-primary">Registrar habilidades e intereses</button>
+            </form>
+        </main>
+    </div>
+    <script src="../js/formularios.js"></script>
+</body>
+</html>

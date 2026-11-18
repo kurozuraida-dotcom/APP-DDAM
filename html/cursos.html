@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Cursos</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <div class="mobile-frame">
+        <header class="app-header">
+            <a href="principal.html" class="btn-close-x" title="Cancelar y volver">X</a>
+            <h1>Cursos</h1>
+            <p>Capacitación y talleres</p>
+        </header>
+
+        <main class="app-body">
+            <form class="form-card" data-categoria="Cursos" novalidate>
+                <div class="input-group">
+                    <label for="institucionCurso">Institución que impartió el curso *</label>
+                    <input type="text" id="institucionCurso" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="especialidadCurso">Especialidad *</label>
+                    <input type="text" id="especialidadCurso" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="fechaInicioCurso">Fecha de inicio *</label>
+                    <input type="date" id="fechaInicioCurso" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="fechaFinCurso">Fecha de finalización *</label>
+                    <input type="date" id="fechaFinCurso" required>
+                </div>
+
+                <div class="input-group file-input-box">
+                    <label for="archivoCurso">Certificado de finalización (Obligatorio) *</label>
+                    <input type="file" id="archivoCurso" accept=".pdf,.jpg,.jpeg,.png" required>
+                </div>
+
+                <p id="mensajeFeedback" class="feedback-msg"></p>
+                <button type="submit" class="btn-primary">Registrar curso</button>
+            </form>
+        </main>
+    </div>
+    <script src="../js/formularios.js"></script>
+</body>
+</html>
